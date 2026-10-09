@@ -1,148 +1,69 @@
 <!doctype html>
-<html lang="hi">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#17121a">
-<meta name="description" content="श्री बालाजी ज्योतिष केंद्र — ज्योतिष, जन्म कुंडली और रत्न संबंधी जानकारी के लिए संपर्क करें।">
-<title>श्री बालाजी ज्योतिष केंद्र | ज्योतिष एवं रत्न</title>
+<html lang="hi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#071326"><title>श्री बालाजी ज्योतिष केंद्र | ज्योतिष एवं रत्न</title>
 <style>
-:root{--ink:#17121a;--wine:#3b1527;--wine2:#64243b;--gold:#d8b36a;--gold-light:#f5dfab;--cream:#fbf6ed;--muted:#bfb2bd;--line:#e8dccb;--green:#16834c}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,"Noto Sans Devanagari",sans-serif;background:var(--cream);color:#251b21;line-height:1.6}a{color:inherit;text-decoration:none}img{max-width:100%}
-.container{width:min(1160px,92%);margin:auto}
-.topline{background:#100d12;color:var(--gold-light);font-size:13px;padding:9px 0}.topline .inner{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
-header{position:sticky;top:0;z-index:10;background:rgba(23,18,26,.97);border-bottom:1px solid #ffffff18;backdrop-filter:blur(12px)}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:78px;color:#fff}
-.brand{display:flex;align-items:center;gap:12px;min-width:0}.brand-mark{width:48px;height:48px;display:grid;place-items:center;border-radius:50%;border:1px solid var(--gold);color:var(--gold-light);font-size:25px;background:linear-gradient(145deg,#512137,#1b141d);flex-shrink:0}
-.brand strong{display:block;font-size:17px;line-height:1.25}.brand small{color:var(--gold);font-size:10px;letter-spacing:1.2px}
-.navlinks{display:flex;gap:22px;font-size:14px;color:#e0d6df}.navlinks a:hover{color:var(--gold-light)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 19px;border-radius:9px;font-weight:750;font-size:14px;border:1px solid transparent;transition:transform .18s,filter .18s;cursor:pointer}.btn:hover{transform:translateY(-2px);filter:brightness(1.05)}
-.btn-gold{background:linear-gradient(135deg,#f2d99b,#c99b4d);color:#26151a}.btn-outline{border-color:#d8b36a;color:var(--gold-light);background:transparent}.btn-green{background:var(--green);color:white}
-.hero{background:radial-gradient(ellipse at 80% 25%,#6c2944 0,transparent 34%),radial-gradient(ellipse at 0% 100%,#3b2034 0,transparent 35%),linear-gradient(120deg,#17121a,#291523 55%,#17121a);color:white;overflow:hidden;position:relative}
-.hero:before{content:"";position:absolute;width:440px;height:440px;border:1px solid #d8b36a33;border-radius:50%;right:-130px;top:-180px;box-shadow:0 0 0 34px #d8b36a0b,0 0 0 70px #d8b36a08}
-.hero-grid{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center;padding:75px 0 78px}
-.eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid #d8b36a65;background:#ffffff08;color:var(--gold-light);border-radius:99px;padding:7px 13px;font-size:13px}
-h1{font-size:clamp(36px,5.3vw,64px);line-height:1.13;letter-spacing:-1.2px;margin:20px 0 17px}h1 em{font-style:normal;color:var(--gold-light)}.hero-copy{max-width:640px;color:#ded3df;font-size:17px}
-.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}.proof{display:flex;gap:18px;flex-wrap:wrap;margin-top:25px;color:#eee0ed;font-size:12px}.proof span:before{content:"✦";color:var(--gold);margin-right:7px}
-.hero-visual{min-height:340px;display:grid;place-items:center;position:relative}.orbit{width:min(350px,88%);aspect-ratio:1;border-radius:50%;border:1px solid #d8b36a8a;display:grid;place-items:center;background:radial-gradient(circle,#4b263b 0,#291923 57%,#1b141d 70%);box-shadow:inset 0 0 50px #d8b36a0b,0 25px 60px #0005;position:relative}
-.orbit:before,.orbit:after{content:"";position:absolute;inset:18px;border:1px dashed #d8b36a80;border-radius:50%}.orbit:after{inset:44px;border-style:solid;transform:rotate(45deg)}.om{font-size:105px;color:var(--gold-light);z-index:1;text-shadow:0 0 28px #d8b36a55}.orbit-label{position:absolute;bottom:7px;left:50%;transform:translateX(-50%);font-size:12px;color:var(--gold-light);letter-spacing:1.4px;white-space:nowrap}
-section.content-section{padding:72px 0}.section-title{max-width:720px;margin:0 auto 35px;text-align:center}.kicker{color:#a26c2b;text-transform:uppercase;letter-spacing:2px;font-size:12px;font-weight:850}.section-title h2{font-size:clamp(28px,4vw,42px);line-height:1.2;margin:9px 0 12px;color:#2b1a25}.section-title p{margin:0;color:#78676e}
-.services{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.service{border:1px solid #eadcc8;border-radius:16px;padding:24px;background:#fffdf9;box-shadow:0 8px 24px #4a2a1608}.service-icon{width:46px;height:46px;display:grid;place-items:center;background:#f5ead8;border-radius:13px;color:#8e5a25;font-size:24px;margin-bottom:13px}.service h3{margin:0 0 7px;font-size:18px}.service p{margin:0;color:#78676e;font-size:14px}
-.gems-section{background:#f0e7d9;border-block:1px solid #e5d7c3}.gem-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.gem-card{overflow:hidden;border:1px solid #e1d1ba;border-radius:17px;background:#fffdf9;box-shadow:0 10px 28px #34201510;transition:transform .2s,box-shadow .2s}.gem-card:hover{transform:translateY(-5px);box-shadow:0 16px 34px #3420151c}
-.gem-photo{height:220px;background:#e5d9cb;overflow:hidden}.gem-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}.gem-card:hover img{transform:scale(1.04)}.gem-content{padding:17px}.gem-tag{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#9a702f;font-weight:800}.gem-content h3{font-size:22px;margin:4px 0;color:#301b26}.gem-content p{font-size:13px;color:#78676e;min-height:42px;margin:0 0 16px}.gem-content .btn{width:100%;padding:11px;color:#5a3018;border-color:#c8a363}
-.about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:38px;align-items:center}.about-panel{padding:34px;border-radius:22px;background:linear-gradient(140deg,#341727,#1b141d);color:white;text-align:center;border:1px solid #7d583d}.about-panel .symbol{font-size:70px;color:var(--gold-light)}.about-panel h3{color:var(--gold-light);margin:4px 0}.about-panel p{color:#d5c7d2;font-size:14px}.about-copy h2{font-size:clamp(28px,4vw,40px);line-height:1.2;margin:10px 0 15px}.about-copy p{color:#78676e}.checklist{padding:0;list-style:none;display:grid;gap:9px;margin:20px 0}.checklist li:before{content:"✓";color:#a26c2b;font-weight:900;margin-right:10px}
-.contact-band{background:linear-gradient(120deg,#321625,#1b141d);color:white;padding:42px 0}.contact-inner{display:flex;justify-content:space-between;align-items:center;gap:25px;flex-wrap:wrap}.contact-inner h2{font-size:clamp(27px,4vw,39px);margin:7px 0}.contact-inner p{color:#d6c8d4;margin:0}.contact-actions{display:flex;gap:10px;flex-wrap:wrap}
-footer{background:#100d12;color:#b9aab8;padding:25px 0;font-size:13px}.footer-inner{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}footer strong{color:var(--gold-light)}
-.float-wa{position:fixed;right:18px;bottom:18px;z-index:20;width:57px;height:57px;border-radius:50%;background:#16834c;color:white;display:grid;place-items:center;font-size:24px;box-shadow:0 7px 24px #0004;border:2px solid #ffffff4d}
-.note{font-size:12px;color:#82716c;text-align:center;margin-top:24px}
-@media(max-width:900px){.navlinks{display:none}.hero-grid,.about-grid{grid-template-columns:1fr}.hero-grid{padding:54px 0}.hero-visual{min-height:300px}.services{grid-template-columns:1fr}.gem-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:480px){.topline .inner{justify-content:center}.brand strong{font-size:14px}.brand small{font-size:9px}.nav .btn{padding:10px 12px;font-size:12px}.hero-copy{font-size:15px}.hero-visual{min-height:260px}.om{font-size:80px}.gem-grid{gap:11px}.gem-photo{height:150px}.gem-content{padding:12px}.gem-content h3{font-size:18px}.gem-content p{font-size:12px;min-height:55px}.gem-content .btn{font-size:12px;padding:10px 6px}section.content-section{padding:54px 0}}
-</style>
-</head>
-<body>
-<div class="topline"><div class="container inner"><span>✦ श्रद्धा • मार्गदर्शन • परामर्श</span><span>कॉल: <a href="tel:+917078890096">7078890096</a></span></div></div>
-<header><div class="container nav">
-<a class="brand" href="#home"><span class="brand-mark">ॐ</span><span><strong>श्री बालाजी ज्योतिष केंद्र</strong><small>ASTROLOGY • GUIDANCE • GEMS</small></span></a>
-<nav class="navlinks" aria-label="मुख्य नेविगेशन"><a href="#home">होम</a><a href="#services">सेवाएँ</a><a href="#gems">रत्न</a><a href="#about">हमारे बारे में</a><a href="#contact">संपर्क</a></nav>
-<a class="btn btn-gold" href="tel:+917078890096">☎ कॉल करें</a>
-</div></header>
-<main>
-<section class="hero" id="home"><div class="container hero-grid"><div>
-<span class="eyebrow">✦ आपका स्वागत है</span>
-<h1>आस्था के साथ<br><em>ज्योतिषीय मार्गदर्शन</em></h1>
-<p class="hero-copy">श्री बालाजी ज्योतिष केंद्र में ज्योतिष, जन्म कुंडली और रत्नों से जुड़ी जानकारी के लिए संपर्क करें। अपनी आवश्यकता बताएं और परामर्श की जानकारी प्राप्त करें।</p>
-<div class="hero-actions"><a class="btn btn-gold" href="https://wa.me/917078890096?text=नमस्ते%2C%20मुझे%20ज्योतिष%20परामर्श%20की%20जानकारी%20चाहिए।" target="_blank" rel="noopener">WhatsApp पर पूछें ↗</a><a class="btn btn-outline" href="#gems">रत्न संग्रह देखें ↓</a></div>
-<div class="proof"><span>व्यक्तिगत परामर्श</span><span>रत्नों की जानकारी</span><span>सीधा संपर्क</span></div>
-</div><div class="hero-visual"><div class="orbit"><div class="om">ॐ</div></div><div class="orbit-label">श्री बालाजी ज्योतिष केंद्र</div></div></div></section>
-<section class="content-section" id="services"><div class="container"><div class="section-title"><div class="kicker">हमारी सेवाएँ</div><h2>आपकी आवश्यकता के अनुसार मार्गदर्शन</h2><p>सेवा की उपलब्धता और परामर्श की जानकारी सीधे संपर्क करके प्राप्त करें।</p></div>
-<div class="services">
-<article class="service"><div class="service-icon">☼</div><h3>ज्योतिष परामर्श</h3><p>जीवन से जुड़े सवालों और व्यक्तिगत मार्गदर्शन के लिए संपर्क करें।</p></article>
-<article class="service"><div class="service-icon">✧</div><h3>जन्म कुंडली</h3><p>जन्म विवरण और कुंडली से संबंधित जानकारी के लिए पूछें।</p></article>
-<article class="service"><div class="service-icon">◇</div><h3>रत्न परामर्श</h3><p>विभिन्न रत्नों की पहचान, गुणवत्ता और उपलब्धता के बारे में जानें।</p></article>
-</div></div></section>
-<section class="content-section gems-section" id="gems"><div class="container"><div class="section-title"><div class="kicker">Gemstone collection</div><h2>रत्न संग्रह</h2><p>अपनी पसंद के रत्न की कीमत और उपलब्धता पूछने के लिए कार्ड पर क्लिक करें।</p></div>
-<div class="gem-grid">
-    <article class="gem-card">
-      <div class="gem-photo"><img src="assets/images/pukhraj.jpg" alt="पुखराज रत्न की तस्वीर" loading="lazy"></div>
-      <div class="gem-content">
-        <span class="gem-tag">रत्न संग्रह</span>
-        <h3>पुखराज</h3>
-        <p>पीले रत्न के बारे में जानकारी और उपलब्धता पूछें।</p>
-        <a class="btn btn-outline wa-gem" data-gem="पुखराज" href="https://wa.me/917078890096?text=नमस्ते, मुझे पुखराज की कीमत और उपलब्धता जाननी है।" target="_blank" rel="noopener">कीमत पूछें <span>↗</span></a>
-      </div>
+:root{--bg:#071326;--panel:#101f35;--gold:#f0d28c;--muted:#c5cbd7;--line:#34435a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:#fff8e9;font-family:system-ui,-apple-system,"Noto Sans Devanagari",sans-serif;line-height:1.55}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+header{background:#050c19;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 0}
+.brand{display:flex;align-items:center;gap:11px}.om{height:52px;width:52px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-size:28px;flex-shrink:0}
+.brand strong{display:block;color:var(--gold);font-size:18px}.brand small{display:block;color:#c5cbd7;font-size:11px}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--gold);color:#20172a;padding:12px 17px;border-radius:10px;font-weight:800;border:1px solid var(--gold)}
+.hero{padding:55px 0;background:radial-gradient(ellipse at 80% 20%,#44233d,transparent 34%),linear-gradient(125deg,#071326,#19152a)}.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
+.pill{display:inline-block;border:1px solid #a98b52;border-radius:30px;padding:6px 12px;color:var(--gold);font-size:13px}
+h1{font-size:clamp(34px,5vw,58px);line-height:1.13;margin:17px 0}h1 span{color:var(--gold)}.hero p{color:var(--muted);font-size:17px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}.outline{background:transparent;color:var(--gold)}
+.hero-art{display:grid;place-items:center;min-height:230px}.mandala{width:220px;aspect-ratio:1;border:1px solid #cba85e;border-radius:50%;display:grid;place-items:center;font-size:85px;color:var(--gold);background:radial-gradient(circle,#38263b,#111a2e);box-shadow:0 0 0 20px #d5b66c0d,0 0 0 42px #d5b66c08}
+section{padding:52px 0}.section-head{text-align:center;max-width:700px;margin:0 auto 28px}.section-head h2{font-size:clamp(28px,4vw,40px);color:var(--gold);margin:8px 0}.section-head p{color:var(--muted);margin:0}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:17px}.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;overflow:hidden;min-width:0;box-shadow:0 8px 22px #0003}
+.card img{display:block;width:100%;height:220px;object-fit:cover;background:#eee}.card-body{padding:16px}.tag{font-size:11px;color:var(--gold);letter-spacing:1px}h3{font-size:22px;margin:5px 0}.card p{color:var(--muted);margin:0 0 14px}.card .btn{width:100%}
+.contact{background:#111e32;border-block:1px solid var(--line);text-align:center}.contact h2{color:var(--gold)}.contact p{color:var(--muted)}footer{padding:24px;text-align:center;color:var(--muted);font-size:13px}
+@media(max-width:800px){.hero-grid{grid-template-columns:1fr}.hero-art{min-height:190px}.mandala{width:170px;font-size:68px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.card img{height:170px}}
+@media(max-width:440px){.brand strong{font-size:14px}.brand small{font-size:9px}.om{width:44px;height:44px;font-size:23px}.nav>.btn{font-size:12px;padding:10px}.grid{gap:10px}.card img{height:140px}.card-body{padding:11px}h3{font-size:18px}.card p{font-size:12px}.card .btn{font-size:12px;padding:10px 5px}}
+</style></head><body>
+<header><div class="wrap nav"><a class="brand" href="#"><span class="om">ॐ</span><span><strong>श्री बालाजी ज्योतिष केंद्र</strong><small>मेहंदीपुर वाले बालाजी की कृपा से • ज्योतिष एवं रत्न</small></span></a><a class="btn" href="tel:+917078890096">☎ कॉल करें</a></div></header>
+<section class="hero"><div class="wrap hero-grid"><div><span class="pill">आपका स्वागत है</span><h1>ज्योतिष एवं रत्नों के लिए<br><span>सही मार्गदर्शन</span></h1><p>जन्म कुंडली, ज्योतिष परामर्श और रत्नों की जानकारी के लिए संपर्क करें। किसी रत्न की कीमत और उपलब्धता WhatsApp पर पूछें।</p><div class="actions"><a class="btn" href="https://wa.me/917078890096" target="_blank" rel="noopener">WhatsApp करें ↗</a><a class="btn outline" href="#gems">रत्न देखें ↓</a></div></div><div class="hero-art"><div class="mandala">ॐ</div></div></div></section>
+<section id="gems"><div class="wrap"><div class="section-head"><span class="pill">GEMSTONE COLLECTION</span><h2>रत्न संग्रह</h2><p>आपके भेजे हुए रत्नों की तस्वीरें वेबसाइट में सीधे शामिल हैं।</p></div><div class="grid">
+    <article class="card">
+      <img src="pukhraj.jpg" alt="पुखराज (Yellow Sapphire)" loading="lazy">
+      <div class="card-body"><span class="tag">रत्न संग्रह</span><h3>पुखराज</h3><p>Yellow Sapphire</p>
+      <a class="btn" href="https://wa.me/917078890096?text=नमस्ते, मुझे पुखराज की कीमत और उपलब्धता जाननी है।" target="_blank" rel="noopener">कीमत पूछें ↗</a></div>
     </article>
-    <article class="gem-card">
-      <div class="gem-photo"><img src="assets/images/neelam.jpg" alt="नीलम रत्न की तस्वीर" loading="lazy"></div>
-      <div class="gem-content">
-        <span class="gem-tag">रत्न संग्रह</span>
-        <h3>नीलम</h3>
-        <p>नीले रत्न की गुणवत्ता और उपलब्धता के बारे में पूछें।</p>
-        <a class="btn btn-outline wa-gem" data-gem="नीलम" href="https://wa.me/917078890096?text=नमस्ते, मुझे नीलम की कीमत और उपलब्धता जाननी है।" target="_blank" rel="noopener">कीमत पूछें <span>↗</span></a>
-      </div>
+    <article class="card">
+      <img src="neelam.jpg" alt="नीलम (Blue Sapphire)" loading="lazy">
+      <div class="card-body"><span class="tag">रत्न संग्रह</span><h3>नीलम</h3><p>Blue Sapphire</p>
+      <a class="btn" href="https://wa.me/917078890096?text=नमस्ते, मुझे नीलम की कीमत और उपलब्धता जाननी है।" target="_blank" rel="noopener">कीमत पूछें ↗</a></div>
     </article>
-    <article class="gem-card">
-      <div class="gem-photo"><img src="assets/images/manikya.jpg" alt="माणिक्य रत्न की तस्वीर" loading="lazy"></div>
-      <div class="gem-content">
-        <span class="gem-tag">रत्न संग्रह</span>
-        <h3>माणिक्य</h3>
-        <p>माणिक्य की जानकारी और कीमत के लिए संपर्क करें।</p>
-        <a class="btn btn-outline wa-gem" data-gem="माणिक्य" href="https://wa.me/917078890096?text=नमस्ते, मुझे माणिक्य की कीमत और उपलब्धता जाननी है।" target="_blank" rel="noopener">कीमत पूछें <span>↗</span></a>
-      </div>
+    <article class="card">
+      <img src="manikya.jpg" alt="माणिक्य (Ruby)" loading="lazy">
+      <div class="card-body"><span class="tag">रत्न संग्रह</span><h3>माणिक्य</h3><p>Ruby</p>
+      <a class="btn" href="https://wa.me/917078890096?text=नमस्ते, मुझे माणिक्य की कीमत और उपलब्धता जाननी है।" target="_blank" rel="noopener">कीमत पूछें ↗</a></div>
     </article>
-    <article class="gem-card">
-      <div class="gem-photo"><img src="assets/images/panna.jpg" alt="पन्ना रत्न की तस्वीर" loading="lazy"></div>
-      <div class="gem-content">
-        <span class="gem-tag">रत्न संग्रह</span>
-        <h3>पन्ना</h3>
-        <p>पन्ना रत्न की गुणवत्ता और उपलब्धता पूछें।</p>
-        <a class="btn btn-outline wa-gem" data-gem="पन्ना" href="https://wa.me/917078890096?text=नमस्ते, मुझे पन्ना की कीमत और उपलब्धता जाननी है।" target="_blank" rel="noopener">कीमत पूछें <span>↗</span></a>
-      </div>
+    <article class="card">
+      <img src="panna.jpg" alt="पन्ना (Emerald)" loading="lazy">
+      <div class="card-body"><span class="tag">रत्न संग्रह</span><h3>पन्ना</h3><p>Emerald</p>
+      <a class="btn" href="https://wa.me/917078890096?text=नमस्ते, मुझे पन्ना की कीमत और उपलब्धता जाननी है।" target="_blank" rel="noopener">कीमत पूछें ↗</a></div>
     </article>
-    <article class="gem-card">
-      <div class="gem-photo"><img src="assets/images/heera.jpg" alt="हीरा रत्न की तस्वीर" loading="lazy"></div>
-      <div class="gem-content">
-        <span class="gem-tag">रत्न संग्रह</span>
-        <h3>हीरा</h3>
-        <p>हीरे और आभूषण संबंधी जानकारी प्राप्त करें।</p>
-        <a class="btn btn-outline wa-gem" data-gem="हीरा" href="https://wa.me/917078890096?text=नमस्ते, मुझे हीरा की कीमत और उपलब्धता जाननी है।" target="_blank" rel="noopener">कीमत पूछें <span>↗</span></a>
-      </div>
+    <article class="card">
+      <img src="heera.jpg" alt="हीरा (Diamond)" loading="lazy">
+      <div class="card-body"><span class="tag">रत्न संग्रह</span><h3>हीरा</h3><p>Diamond</p>
+      <a class="btn" href="https://wa.me/917078890096?text=नमस्ते, मुझे हीरा की कीमत और उपलब्धता जाननी है।" target="_blank" rel="noopener">कीमत पूछें ↗</a></div>
     </article>
-    <article class="gem-card">
-      <div class="gem-photo"><img src="assets/images/moonga.jpg" alt="मूंगा रत्न की तस्वीर" loading="lazy"></div>
-      <div class="gem-content">
-        <span class="gem-tag">रत्न संग्रह</span>
-        <h3>मूंगा</h3>
-        <p>मूंगा रत्न के बारे में जानकारी प्राप्त करें।</p>
-        <a class="btn btn-outline wa-gem" data-gem="मूंगा" href="https://wa.me/917078890096?text=नमस्ते, मुझे मूंगा की कीमत और उपलब्धता जाननी है।" target="_blank" rel="noopener">कीमत पूछें <span>↗</span></a>
-      </div>
+    <article class="card">
+      <img src="moonga.jpg" alt="मूंगा (Red Coral)" loading="lazy">
+      <div class="card-body"><span class="tag">रत्न संग्रह</span><h3>मूंगा</h3><p>Red Coral</p>
+      <a class="btn" href="https://wa.me/917078890096?text=नमस्ते, मुझे मूंगा की कीमत और उपलब्धता जाननी है।" target="_blank" rel="noopener">कीमत पूछें ↗</a></div>
     </article>
-    <article class="gem-card">
-      <div class="gem-photo"><img src="assets/images/moti.jpg" alt="मोती रत्न की तस्वीर" loading="lazy"></div>
-      <div class="gem-content">
-        <span class="gem-tag">रत्न संग्रह</span>
-        <h3>मोती</h3>
-        <p>मोती की गुणवत्ता और उपलब्धता पूछें।</p>
-        <a class="btn btn-outline wa-gem" data-gem="मोती" href="https://wa.me/917078890096?text=नमस्ते, मुझे मोती की कीमत और उपलब्धता जाननी है।" target="_blank" rel="noopener">कीमत पूछें <span>↗</span></a>
-      </div>
+    <article class="card">
+      <img src="moti.jpg" alt="मोती (Pearl)" loading="lazy">
+      <div class="card-body"><span class="tag">रत्न संग्रह</span><h3>मोती</h3><p>Pearl</p>
+      <a class="btn" href="https://wa.me/917078890096?text=नमस्ते, मुझे मोती की कीमत और उपलब्धता जाननी है।" target="_blank" rel="noopener">कीमत पूछें ↗</a></div>
     </article>
-    <article class="gem-card">
-      <div class="gem-photo"><img src="assets/images/rudraksha.jpg" alt="रुद्राक्ष रत्न की तस्वीर" loading="lazy"></div>
-      <div class="gem-content">
-        <span class="gem-tag">रत्न संग्रह</span>
-        <h3>रुद्राक्ष</h3>
-        <p>रुद्राक्ष की जानकारी के लिए संपर्क करें।</p>
-        <a class="btn btn-outline wa-gem" data-gem="रुद्राक्ष" href="https://wa.me/917078890096?text=नमस्ते, मुझे रुद्राक्ष की कीमत और उपलब्धता जाननी है।" target="_blank" rel="noopener">कीमत पूछें <span>↗</span></a>
-      </div>
-    </article></div>
-<p class="note">रत्नों की गुणवत्ता और प्रामाणिकता खरीदने से पहले जाँचें। किसी परिणाम की गारंटी नहीं दी जाती।</p>
-</div></section>
-<section class="content-section" id="about"><div class="container about-grid">
-<div class="about-panel"><div class="symbol">ॐ</div><h3>श्री बालाजी ज्योतिष केंद्र</h3><p>ज्योतिष, कुंडली और रत्नों से जुड़ी जानकारी के लिए संपर्क करें।</p></div>
-<div class="about-copy"><div class="kicker">हमारे बारे में</div><h2>आपके सवालों के लिए सीधा संपर्क</h2><p>यह वेबसाइट श्री बालाजी ज्योतिष केंद्र की सेवाओं और रत्नों की जानकारी तक आसान पहुँच के लिए बनाई गई है। अपनी आवश्यकता बताने के लिए फोन या WhatsApp का उपयोग करें।</p><ul class="checklist"><li>फोन पर सीधे बात करें</li><li>WhatsApp पर अपना सवाल भेजें</li><li>रत्नों की कीमत और उपलब्धता पूछें</li></ul><a class="btn btn-gold" href="https://wa.me/917078890096" target="_blank" rel="noopener">अभी संपर्क करें ↗</a></div>
-</div></section>
-<section class="contact-band" id="contact"><div class="container contact-inner"><div><div class="kicker" style="color:#f0d18e">संपर्क करें</div><h2>हमसे बात करें</h2><p>फोन: <strong style="color:#f5dfab">7078890096</strong></p></div><div class="contact-actions"><a class="btn btn-gold" href="tel:+917078890096">☎ अभी कॉल करें</a><a class="btn btn-outline" href="https://wa.me/917078890096?text=नमस्ते%2C%20मुझे%20जानकारी%20चाहिए।" target="_blank" rel="noopener">WhatsApp करें ↗</a></div></div></section>
-</main>
-<footer><div class="container footer-inner"><span>© <span id="year"></span> <strong>श्री बालाजी ज्योतिष केंद्र</strong></span><span>ज्योतिष • कुंडली • रत्न परामर्श</span></div></footer>
-<a class="float-wa" href="https://wa.me/917078890096" target="_blank" rel="noopener" aria-label="WhatsApp पर संपर्क करें">☏</a>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <article class="card">
+      <img src="rudraksha.jpg" alt="रुद्राक्ष (Rudraksha)" loading="lazy">
+      <div class="card-body"><span class="tag">रत्न संग्रह</span><h3>रुद्राक्ष</h3><p>Rudraksha</p>
+      <a class="btn" href="https://wa.me/917078890096?text=नमस्ते, मुझे रुद्राक्ष की कीमत और उपलब्धता जाननी है।" target="_blank" rel="noopener">कीमत पूछें ↗</a></div>
+    </article></div></div></section>
+<section class="contact"><div class="wrap"><h2>परामर्श के लिए संपर्क करें</h2><p>फोन: <strong style="color:var(--gold)">7078890096</strong></p><div class="actions" style="justify-content:center"><a class="btn" href="tel:+917078890096">अभी कॉल करें</a><a class="btn outline" href="https://wa.me/917078890096" target="_blank" rel="noopener">WhatsApp करें</a></div></div></section>
+<footer>© <span id="year"></span> श्री बालाजी ज्योतिष केंद्र</footer><script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body></html>
