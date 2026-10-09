@@ -1,4 +1,4 @@
-const CACHE = "balaji-jyotish-bright-gems-v8";
+const CACHE = "balaji-jyotish-real-gems-v7";
 const FILES = ["./", "./index.html", "./styles.css", "./app.js", "./manifest.webmanifest", "./privacy.html", "./assets/icon.svg", "./mehandipur-balaji.jpg", "./pukhraj.jpg", "./neelam.jpg", "./manikya.jpg", "./panna.jpg", "./heera.jpg", "./moonga.jpg", "./moti.jpg", "./rudraksha.jpg"];
 self.addEventListener("install", event => event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(FILES))));
 self.addEventListener("activate", event => event.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(key => key !== CACHE).map(key => caches.delete(key))))));
