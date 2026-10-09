@@ -1,5 +1,5 @@
 // IMPORTANT: Replace with the business WhatsApp number, digits only, e.g. 919876543210.
-const WHATSAPP_NUMBER = "YOUR_WHATSAPP_NUMBER";
+const WHATSAPP_NUMBER = "+919058019715";
 const waLink = (message) => {
   if (WHATSAPP_NUMBER === "YOUR_WHATSAPP_NUMBER" || !/^\d{10,15}$/.test(WHATSAPP_NUMBER)) {
     alert("पहले app.js में YOUR_WHATSAPP_NUMBER की जगह केंद्र का सही WhatsApp नंबर डालें।");
