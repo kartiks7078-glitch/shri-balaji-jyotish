@@ -12,19 +12,7 @@
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="stylesheet" href="styles.css">
 
-<style>
-/* Product cards intentionally use decorative gemstone icons, so broken photo boxes never appear. */
-.product-art{position:relative;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:14px;min-height:190px;overflow:hidden}
-.product-art .gem-placeholder{display:flex;align-items:center;justify-content:center;width:92px;height:92px;border-radius:28% 42% 32% 38%;font-size:74px;line-height:1;color:#f7d77e;text-shadow:0 3px 16px rgba(0,0,0,.8);filter:drop-shadow(0 0 12px rgba(225,180,65,.22))}
-.product-art.art-blue .gem-placeholder{color:#72aaff;text-shadow:0 3px 18px #07317d}
-.product-art.art-red .gem-placeholder{color:#ff758a;text-shadow:0 3px 18px #7b1020}
-.product-art.art-green .gem-placeholder{color:#5ed39a;text-shadow:0 3px 18px #064e30}
-.product-art.art-clear .gem-placeholder{color:#eaf4ff;text-shadow:0 3px 18px #687b95}
-.product-art.art-orange .gem-placeholder{color:#ff8b5d;text-shadow:0 3px 18px #7b2412}
-.product-art.art-pearl .gem-placeholder{color:#fff0cb;text-shadow:0 3px 18px #8e744b}
-.product-art.art-brown .gem-placeholder{color:#b97854;text-shadow:0 3px 18px #4b2414}
-.product-art b{position:static;display:block;text-align:center;text-shadow:0 2px 8px #000;letter-spacing:.2em}
-</style>
+
 
 
 <style>
@@ -33,6 +21,14 @@
 .business-contact-number a:not(.button){color:inherit;font-weight:700;text-decoration:none}
 .nav-whatsapp{margin-left:8px}
 @media(max-width:900px){.nav-whatsapp{display:none}}
+</style>
+
+
+<style>
+.product-art{position:relative;display:flex;align-items:center;justify-content:flex-end;flex-direction:column;gap:6px;min-height:190px;overflow:hidden;padding:12px 10px}
+.product-art .gem-photo{display:block;width:100%;height:128px;object-fit:contain;border-radius:10px;mix-blend-mode:multiply}
+.product-art b{position:static;display:block;text-align:center;text-shadow:none;letter-spacing:.12em;color:#64121b}
+@media(max-width:600px){.product-art{min-height:165px}.product-art .gem-photo{height:105px}}
 </style>
 
 </head>
@@ -60,17 +56,27 @@
    <div class="hero-caption"><span>॥ जय श्री मेहंदीपुर बालाजी ॥</span><strong>ज्योतिष एवं रत्न मार्गदर्शन</strong></div>
  </div>
 </section>
+<section class="category-strip" aria-label="मुख्य रत्न">
+ <a href="#gems"><span class="mini-gem yellow"></span><strong>पुखराज</strong><small>Yellow Sapphire</small></a>
+ <a href="#gems"><span class="mini-gem blue"></span><strong>नीलम</strong><small>Blue Sapphire</small></a>
+ <a href="#gems"><span class="mini-gem red"></span><strong>माणिक्य</strong><small>Ruby</small></a>
+ <a href="#gems"><span class="mini-gem green"></span><strong>पन्ना</strong><small>Emerald</small></a>
+ <a href="#gems"><span class="mini-gem clear"></span><strong>हीरा</strong><small>Diamond</small></a>
+ <a href="#gems"><span class="mini-gem orange"></span><strong>मूंगा</strong><small>Red Coral</small></a>
+ <a href="#gems"><span class="mini-gem pearl"></span><strong>मोती</strong><small>Pearl</small></a>
+ <a href="#gems"><span class="mini-gem brown"></span><strong>रुद्राक्ष</strong><small>Rudraksha</small></a>
+</section>
 <section class="section" id="gems">
  <div class="section-head"><div><p class="eyebrow">रत्न संग्रह</p><h2>अपनी पसंद का रत्न देखें</h2><p>रत्नों की तस्वीरें देखें। कीमत, वजन और उपलब्धता की जानकारी के लिए सीधे पूछें।</p></div><a class="text-link" href="#contact">सभी रत्नों के लिए पूछें ↗</a></div>
  <div class="product-grid">
-  <article class="product-card"><div class="product-art art-yellow"><span class="gem-placeholder" aria-hidden="true">✦</span><b>PUKHRAJ</b></div><div class="product-info"><h3>पुखराज</h3><p>Yellow Sapphire</p><a class="inquire" data-product="पुखराज" href="#contact">कीमत पूछें ↗</a></div></article>
-  <article class="product-card"><div class="product-art art-blue"><span class="gem-placeholder" aria-hidden="true">✦</span><b>NEELAM</b></div><div class="product-info"><h3>नीलम</h3><p>Blue Sapphire</p><a class="inquire" data-product="नीलम" href="#contact">कीमत पूछें ↗</a></div></article>
-  <article class="product-card"><div class="product-art art-red"><span class="gem-placeholder" aria-hidden="true">✦</span><b>MANIK</b></div><div class="product-info"><h3>माणिक्य</h3><p>Ruby</p><a class="inquire" data-product="माणिक्य" href="#contact">कीमत पूछें ↗</a></div></article>
-  <article class="product-card"><div class="product-art art-green"><span class="gem-placeholder" aria-hidden="true">✦</span><b>PANNA</b></div><div class="product-info"><h3>पन्ना</h3><p>Emerald</p><a class="inquire" data-product="पन्ना" href="#contact">कीमत पूछें ↗</a></div></article>
-  <article class="product-card"><div class="product-art art-clear"><span class="gem-placeholder" aria-hidden="true">✧</span><b>HEERA</b></div><div class="product-info"><h3>हीरा</h3><p>Diamond</p><a class="inquire" data-product="हीरा" href="#contact">कीमत पूछें ↗</a></div></article>
-  <article class="product-card"><div class="product-art art-orange"><span class="gem-placeholder" aria-hidden="true">✦</span><b>MOONGA</b></div><div class="product-info"><h3>मूंगा</h3><p>Red Coral</p><a class="inquire" data-product="मूंगा" href="#contact">कीमत पूछें ↗</a></div></article>
-  <article class="product-card"><div class="product-art art-pearl"><span class="gem-placeholder" aria-hidden="true">●</span><b>MOTI</b></div><div class="product-info"><h3>मोती</h3><p>Pearl</p><a class="inquire" data-product="मोती" href="#contact">कीमत पूछें ↗</a></div></article>
-  <article class="product-card"><div class="product-art art-brown"><span class="gem-placeholder" aria-hidden="true">◉</span><b>RUDRAKSHA</b></div><div class="product-info"><h3>रुद्राक्ष</h3><p>Rudraksha</p><a class="inquire" data-product="रुद्राक्ष" href="#contact">कीमत पूछें ↗</a></div></article>
+  <article class="product-card"><div class="product-art art-yellow"><img class="gem-photo" src="pukhraj.jpg" alt="PUKHRAJ रत्न की तस्वीर" loading="lazy"><b>PUKHRAJ</b></div><div class="product-info"><h3>पुखराज</h3><p>Yellow Sapphire</p><a class="inquire" data-product="पुखराज" href="#contact">कीमत पूछें ↗</a></div></article>
+  <article class="product-card"><div class="product-art art-blue"><img class="gem-photo" src="neelam.jpg" alt="NEELAM रत्न की तस्वीर" loading="lazy"><b>NEELAM</b></div><div class="product-info"><h3>नीलम</h3><p>Blue Sapphire</p><a class="inquire" data-product="नीलम" href="#contact">कीमत पूछें ↗</a></div></article>
+  <article class="product-card"><div class="product-art art-red"><img class="gem-photo" src="manikya.jpg" alt="MANIK रत्न की तस्वीर" loading="lazy"><b>MANIK</b></div><div class="product-info"><h3>माणिक्य</h3><p>Ruby</p><a class="inquire" data-product="माणिक्य" href="#contact">कीमत पूछें ↗</a></div></article>
+  <article class="product-card"><div class="product-art art-green"><img class="gem-photo" src="panna.jpg" alt="PANNA रत्न की तस्वीर" loading="lazy"><b>PANNA</b></div><div class="product-info"><h3>पन्ना</h3><p>Emerald</p><a class="inquire" data-product="पन्ना" href="#contact">कीमत पूछें ↗</a></div></article>
+  <article class="product-card"><div class="product-art art-clear"><img class="gem-photo" src="heera.jpg" alt="HEERA रत्न की तस्वीर" loading="lazy"><b>HEERA</b></div><div class="product-info"><h3>हीरा</h3><p>Diamond</p><a class="inquire" data-product="हीरा" href="#contact">कीमत पूछें ↗</a></div></article>
+  <article class="product-card"><div class="product-art art-orange"><img class="gem-photo" src="moonga.jpg" alt="MOONGA रत्न की तस्वीर" loading="lazy"><b>MOONGA</b></div><div class="product-info"><h3>मूंगा</h3><p>Red Coral</p><a class="inquire" data-product="मूंगा" href="#contact">कीमत पूछें ↗</a></div></article>
+  <article class="product-card"><div class="product-art art-pearl"><img class="gem-photo" src="moti.jpg" alt="MOTI रत्न की तस्वीर" loading="lazy"><b>MOTI</b></div><div class="product-info"><h3>मोती</h3><p>Pearl</p><a class="inquire" data-product="मोती" href="#contact">कीमत पूछें ↗</a></div></article>
+  <article class="product-card"><div class="product-art art-brown"><img class="gem-photo" src="rudraksha.jpg" alt="RUDRAKSHA रत्न की तस्वीर" loading="lazy"><b>RUDRAKSHA</b></div><div class="product-info"><h3>रुद्राक्ष</h3><p>Rudraksha</p><a class="inquire" data-product="रुद्राक्ष" href="#contact">कीमत पूछें ↗</a></div></article>
  </div>
 </section>
 <section class="benefits"><div><span>◇</span><strong>स्पष्ट उत्पाद जानकारी</strong><small>वजन, कीमत और उपलब्धता पूछें</small></div><div><span>✧</span><strong>व्यक्तिगत बातचीत</strong><small>आपकी जरूरत के अनुसार</small></div><div><span>♧</span><strong>सीधा संपर्क</strong><small>WhatsApp पर पूछताछ</small></div><div><span>✓</span><strong>सोच-समझकर निर्णय</strong><small>रिपोर्ट उपलब्ध हो तो पहले जाँचें</small></div></section>
