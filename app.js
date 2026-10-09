@@ -2,7 +2,7 @@
   IMPORTANT: Replace the placeholder below with the business WhatsApp number.
   Format: country code + number, digits only. Example for India: 919876543210
 */
-const WHATSAPP_NUMBER = "+919058019715";
+const WHATSAPP_NUMBER = "YOUR_WHATSAPP_NUMBER";
 
 const waLink = (message) => {
   if (!/^\d{10,15}$/.test(WHATSAPP_NUMBER)) {
@@ -76,3 +76,28 @@ document.getElementById("floatingWhatsApp").addEventListener("click", event => {
 if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
   window.addEventListener("load", () => navigator.serviceWorker.register("./service-worker.js").catch(err => console.info("Service worker registration skipped:", err)));
 }
+
+
+// Installable PWA prompt: appears only when the browser supports it.
+let deferredInstallPrompt = null;
+const installButton = document.getElementById("installAppBtn");
+window.addEventListener("beforeinstallprompt", (event) => {
+  event.preventDefault();
+  deferredInstallPrompt = event;
+  if (installButton) installButton.hidden = false;
+});
+if (installButton) {
+  installButton.addEventListener("click", async () => {
+    if (!deferredInstallPrompt) {
+      alert("अगर यह विकल्प उपलब्ध नहीं है, तो Chrome के तीन डॉट मेन्यू में 'Install app' या 'Add to Home screen' देखें।");
+      return;
+    }
+    deferredInstallPrompt.prompt();
+    await deferredInstallPrompt.userChoice;
+    deferredInstallPrompt = null;
+    installButton.hidden = true;
+  });
+}
+window.addEventListener("appinstalled", () => {
+  if (installButton) installButton.hidden = true;
+});
