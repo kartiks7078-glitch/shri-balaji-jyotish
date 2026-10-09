@@ -1,13 +1,12 @@
 {
   "name": "श्री बालाजी ज्योतिष केंद्र",
   "short_name": "बालाजी ज्योतिष",
-  "description": "ज्योतिष परामर्श और रत्नों की जानकारी",
-  "lang": "hi-IN",
-  "start_url": "./index.html",
+  "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#fffaf0",
-  "theme_color": "#6f1724",
+  "background_color": "#fff8ec",
+  "theme_color": "#65121d",
+  "description": "ज्योतिष परामर्श और रत्नों की जानकारी",
   "icons": [
     {
       "src": "assets/icon.svg",

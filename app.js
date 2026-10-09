@@ -1,103 +1,46 @@
-/*
-  IMPORTANT: Replace the placeholder below with the business WhatsApp number.
-  Format: country code + number, digits only. Example for India: 919876543210
-*/
+// IMPORTANT: Replace with the business WhatsApp number, digits only, e.g. 919876543210.
 const WHATSAPP_NUMBER = "YOUR_WHATSAPP_NUMBER";
-
 const waLink = (message) => {
-  if (!/^\d{10,15}$/.test(WHATSAPP_NUMBER)) {
-    alert("पहले app.js फ़ाइल में YOUR_WHATSAPP_NUMBER की जगह सही WhatsApp नंबर डालें। भारत के लिए 91 के बाद 10 अंकों का नंबर लिखें।");
+  if (WHATSAPP_NUMBER === "YOUR_WHATSAPP_NUMBER" || !/^\d{10,15}$/.test(WHATSAPP_NUMBER)) {
+    alert("पहले app.js में YOUR_WHATSAPP_NUMBER की जगह केंद्र का सही WhatsApp नंबर डालें।");
     return null;
   }
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+  return "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message);
 };
-
-document.getElementById("year").textContent = new Date().getFullYear();
-
-const menuToggle = document.getElementById("menuToggle");
-const mainNav = document.getElementById("mainNav");
-menuToggle.addEventListener("click", () => {
-  const open = mainNav.classList.toggle("open");
-  menuToggle.setAttribute("aria-expanded", String(open));
-});
-mainNav.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
-  mainNav.classList.remove("open");
-  menuToggle.setAttribute("aria-expanded", "false");
-}));
-
-document.querySelectorAll("[data-service]").forEach(button => {
-  button.addEventListener("click", () => {
-    document.getElementById("serviceSelect").value = button.dataset.service;
-    document.getElementById("booking").scrollIntoView({ behavior: "smooth" });
+document.querySelectorAll("[data-wa]").forEach((el) => {
+  el.addEventListener("click", (event) => {
+    const url = waLink("नमस्ते, मुझे श्री बालाजी ज्योतिष केंद्र की सेवाओं के बारे में जानकारी चाहिए।");
+    if (url) { event.preventDefault(); window.open(url, "_blank", "noopener"); }
+    else event.preventDefault();
   });
 });
-document.querySelectorAll("[data-product]").forEach(button => {
-  button.addEventListener("click", () => {
-    const url = waLink(`नमस्कार, मुझे ${button.dataset.product} के बारे में जानकारी, उपलब्धता, वजन, कीमत और लैब रिपोर्ट के बारे में पूछना है।`);
-    if (url) window.open(url, "_blank", "noopener,noreferrer");
+document.querySelectorAll("[data-product]").forEach((el) => {
+  el.addEventListener("click", (event) => {
+    const url = waLink("नमस्ते, मुझे " + el.dataset.product + " के वजन, कीमत, उपलब्धता और यदि उपलब्ध हो तो लैब रिपोर्ट के बारे में जानकारी चाहिए।");
+    if (url) { event.preventDefault(); window.open(url, "_blank", "noopener"); }
+    else event.preventDefault();
   });
 });
-
-const search = document.getElementById("gemSearch");
-const filter = document.getElementById("gemFilter");
-function filterGems() {
-  const term = search.value.trim().toLowerCase();
-  document.querySelectorAll(".gem-card").forEach(card => {
-    const matchesName = card.dataset.name.toLowerCase().includes(term);
-    const matchesColor = filter.value === "all" || card.dataset.color === filter.value;
-    card.hidden = !(matchesName && matchesColor);
+document.querySelectorAll("[data-service]").forEach((el) => {
+  el.addEventListener("click", (event) => {
+    const url = waLink("नमस्ते, मुझे " + el.dataset.service + " के समय और शुल्क की जानकारी चाहिए।");
+    if (url) { event.preventDefault(); window.open(url, "_blank", "noopener"); }
+    else event.preventDefault();
   });
-}
-search.addEventListener("input", filterGems);
-filter.addEventListener("change", filterGems);
-
-document.getElementById("bookingForm").addEventListener("submit", event => {
+});
+document.getElementById("contactForm").addEventListener("submit", (event) => {
   event.preventDefault();
   const name = document.getElementById("customerName").value.trim();
-  const phone = document.getElementById("customerPhone").value.trim();
-  const service = document.getElementById("serviceSelect").value;
+  const interest = document.getElementById("interest").value;
   const message = document.getElementById("customerMessage").value.trim();
-  if (!name) return;
-  const body = `नमस्कार श्री बालाजी ज्योतिष केंद्र,\nमेरा नाम: ${name}\nमोबाइल: ${phone || "नहीं दिया"}\nसेवा: ${service}\nसंदेश: ${message || "कृपया अधिक जानकारी दें"}\nकृपया उपलब्ध समय और शुल्क बताएं।`;
-  const url = waLink(body);
-  if (url) {
-    document.getElementById("formNote").textContent = "WhatsApp खुल रहा है। संदेश जाँचकर खुद भेजें; बुकिंग भेजने के बाद ही केंद्र से पुष्टि लें।";
-    window.open(url, "_blank", "noopener,noreferrer");
-  }
+  const url = waLink("नमस्ते, मेरा नाम " + name + " है। विषय: " + interest + "। संदेश: " + (message || "कृपया अधिक जानकारी दें।"));
+  if (url) window.open(url, "_blank", "noopener");
 });
-
-document.getElementById("floatingWhatsApp").addEventListener("click", event => {
-  if (!/^\d{10,15}$/.test(WHATSAPP_NUMBER)) {
-    event.preventDefault();
-    alert("WhatsApp चालू करने के लिए app.js में अपना सही नंबर सेट करें।");
-  }
-});
-
+const menuToggle = document.getElementById("menuToggle");
+const nav = document.getElementById("mainNav");
+menuToggle.addEventListener("click", () => nav.classList.toggle("open"));
+nav.querySelectorAll("a").forEach(a => a.addEventListener("click", () => nav.classList.remove("open")));
+document.getElementById("year").textContent = new Date().getFullYear();
 if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
-  window.addEventListener("load", () => navigator.serviceWorker.register("./service-worker.js").catch(err => console.info("Service worker registration skipped:", err)));
+  window.addEventListener("load", () => navigator.serviceWorker.register("./service-worker.js").catch(() => {}));
 }
-
-
-// Installable PWA prompt: appears only when the browser supports it.
-let deferredInstallPrompt = null;
-const installButton = document.getElementById("installAppBtn");
-window.addEventListener("beforeinstallprompt", (event) => {
-  event.preventDefault();
-  deferredInstallPrompt = event;
-  if (installButton) installButton.hidden = false;
-});
-if (installButton) {
-  installButton.addEventListener("click", async () => {
-    if (!deferredInstallPrompt) {
-      alert("अगर यह विकल्प उपलब्ध नहीं है, तो Chrome के तीन डॉट मेन्यू में 'Install app' या 'Add to Home screen' देखें।");
-      return;
-    }
-    deferredInstallPrompt.prompt();
-    await deferredInstallPrompt.userChoice;
-    deferredInstallPrompt = null;
-    installButton.hidden = true;
-  });
-}
-window.addEventListener("appinstalled", () => {
-  if (installButton) installButton.hidden = true;
-});
